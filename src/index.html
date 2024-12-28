@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-istok">
+  <!-- section 1 -->
+  <section class="flex h-screen">
+    <!-- side bar -->
+    <div class="w-[10%] bg-primary-default relative">
+      <!-- top -->
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <div class="w-[52px] h-[18px]">
+          <img src="../img/Logo Dark 1.png" alt="logo" class="w-full h-full object-cover ">
+        </div>
+        <!-- toggle -->
+        <div>
+          <label for="check" class="bg-primary-secondary cursor-pointer relative w-4 h-2 rounded-full block">
+            <input type="checkbox" id="check" class="sr-only peer">
+            <span
+              class="w-2/5 h-4/5 bg-white absolute rounded-full left-[1px] top-[1px]  peer-checked:left-[9px] transition-all duration-500"></span>
+          </label>
+        </div>
+      </div>
+      <!-- secend -->
+      <div class="bg-primary-secondary flex gap-2 py-[10px] px-[12px] items-center">
+        <img src="../img/window.png" alt="">
+        <h6 class="text-[6px] text-white">Setting up Your site</h6>
+      </div>
+
+      <!-- bottom section -->
+      <div class="absolute border-t bottom-0 w-full border-white">
+        <div class="flex items-center pt-[6px] pb-[3px] px-[6px] ">
+          <h5 class="text-primary-secondary bg-white w-4 h-4 rounded-[2px] flex items-center justify-center">O</h5>
+          <h6 class="text-[8px] ml-[5px] font-semibold text-white">Online</h6>
+
+        </div>
+      </div>
+    </div>
+    <!-- main conteint -->
+    <div class="relative w-[90%]">
+      <!-- center content -->
+      <div class="px-[50px] pt-4 pb-[22px] h-full">
+        <!-- top -->
+        <div class="flex items-center justify-between">
+          <h5 class="text-[8px] text-primary-secondary">Name your new site</h5>
+          <a href=""
+            class="bg-primary-secondary mb-[6px] py-[6px] px-[10px] rounded text-white text-[8px] font-semibold">Continue</a>
+        </div>
+        <!-- form -->
+        <form class="h-full pb-4">
+          <div class="flex items-center justify-center flex-col w-full h-full border">
+            <h2 class="text-[11px] text-color">What is the name of your new site?</h2>
+            <p class="text-[6px] text-color mb-3">You can change this at any time. It's just a starting point.</p>
+            <input type="text" placeholder="Spread Tech."
+              class="border border-[#74777E] placeholder:text-[#949494] placeholder:text-[7px] rounded focus:outline-none">
+          </div>
+        </form>
+      </div>
+      <!-- navigation -->
+      <!-- First Box -->
+<div class="absolute bottom-1 left-2 bg-primary-default rounded-[5px] p-2 group">
+  <!-- 1st Section (Online) -->
+  <div class="flex items-center mb-4">
+    <h5 class="text-white text-lg bg-primary-secondary px-[10px] py-[6px] rounded-[5px] flex items-center justify-center">
+      O
+    </h5>
+    <div class="ml-2">
+      <h6 class="text-lg font-normal ml-lg text-white">Online</h6>
+      <h6 class="text-[9px] font-normal text-white">Manage online here</h6>
+    </div>
+  </div>
+  <!-- 2nd Section (Modules) - Hidden by default, shows on hover -->
+  <div class="group-hover:block hidden bg-gradient-to-r from-[#1660BE] to-[#2C89FF] rounded-[5px]">
+    <div class="flex items-center justify-between p-[6px]">
+      <div class="flex items-center gap-3">
+        <img src="../img/Modules.png" alt="">
+        <h4 class="text-[13px] text-white font-normal">Modules</h4>
+      </div>
+      <img src="../img/Vector.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- Second Box (Appears when the first box is hovered) -->
+<div class="absolute bottom-1 left-40 bg-primary-default rounded-[5px] p-2 group">
+  <!-- 1st Section (Online) -->
+  <div class="flex items-center mb-4">
+    <h5 class="text-white text-lg bg-primary-secondary px-[10px] py-[6px] rounded-[5px] flex items-center justify-center">
+      O
+    </h5>
+    <div class="ml-2">
+      <h6 class="text-lg font-normal ml-lg text-white">Online</h6>
+      <h6 class="text-[9px] font-normal text-white">Manage online here</h6>
+    </div>
+  </div>
+  <!-- 2nd Section (Modules) - Hidden by default, shows on hover -->
+  <div class="group-hover:block hidden bg-gradient-to-r from-[#1660BE] to-[#2C89FF] rounded-[5px]">
+    <div class="flex items-center justify-between p-[6px]">
+      <div class="flex items-center gap-3">
+        <img src="../img/Modules.png" alt="">
+        <h4 class="text-[13px] text-white font-normal">Modules</h4>
+      </div>
+      <img src="../img/Vector.png" alt="">
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- script  -->
+  <script src="../script.js"></script>
+</body>
+
+</html>
