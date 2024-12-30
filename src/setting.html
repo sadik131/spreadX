@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-istok">
+    <section class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-[30%] bg-primary-default h-screen relative">
+            <!-- Top -->
+            <div class="flex pr-5 pl-[15px] py-[11px] items-center justify-between">
+                <!-- Logo -->
+                <div class="w-[164px] h-[58px]">
+                    <img src="../img/Logo.png" alt="logo" class="w-full h-full object-cover">
+                </div>
+                <!-- Toggle -->
+                <div>
+                    <label for="check"
+                        class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
+                        <input type="checkbox" id="check" class="sr-only peer">
+                        <span
+                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- Section -->
+            <div class="bg-primary-secondary flex gap-6 pt-5 pb-2 pl-4 justify-center items-center">
+                <img class="w-[26px] h-[23px]" src="../img/Vector (1).png" alt="">
+                <h6 class="text-[19px] text-white">Setting up Your site</h6>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="absolute border-t pt-5 pb-2 bottom-0 w-full border-[#FFFFFF80]">
+                <div class="flex items-center gap-[14px] pt-[6px] pb-[3px] px-[17px]">
+                    <h5
+                        class="text-primary-secondary w-[52px] h-[52px] text-[28px] bg-white font-semibold rounded-sm flex items-center justify-center">
+                        O
+                    </h5>
+                    <h6 class="text-2xl font-semibold text-white">Online</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="relative w-full overflow-y-scroll">
+            <!-- Center Content -->
+            <div class="px-[50px] h-full">
+                <!-- Top -->
+                <div class="flex items-center justify-between">
+                    <h5 class="text-2xl font-semibold text-primary-secondary">Configure your delivery settings</h5>
+                    <a href="payment.html"
+                        class="bg-primary-secondary mb-5 py-2 px-[20px] rounded text-white text-lg font-semibold">Continue</a>
+                </div>
+                <div class="border rounded-[16px] w-full py-16 px-[165px] flex flex-col gap-[15px]">
+                    <!-- 1st -->
+                    <div
+                        class="p-10 border flex justify-between items-center rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <h4 class="text-[26px] text-[#353535] font-semibold">Do you want to offer <span>
+                                delivery?</span></h4>
+                        <label for="toggle1"
+                            class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                            <input type="checkbox" id="toggle1" class="sr-only peer">
+                            <span
+                                class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                        </label>
+                    </div>
+                    <!-- 2nd -->
+                    <div
+                        class="p-10 border flex justify-between items-center rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <div>
+                            <h4 class="text-[26px] text-[#353535] font-semibold">Calculate & assign delivery times
+                                automatically</h4>
+                            <p class="text-[#7D7D7D] text-lg">Tell us more about how you operate your business to
+                                automatically calculate the delivery
+                                times</p>
+                        </div>
+                        <label for="toggle2"
+                            class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                            <input type="checkbox" id="toggle2" class="sr-only peer">
+                            <span
+                                class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                        </label>
+                    </div>
+                    <!-- 3rd -->
+                    <div class="p-10 border rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <div class="flex gap-[14px] items-center mb-9">
+                            <img src="../img/home.png" class="h-6 w-6" alt="">
+                            <h6 class="text-accent-default font-semibold">DELIVERY</h6>
+                        </div>
+                        <!-- line direction -->
+                        <div class="flex items-end gap-2">
+                            <div
+                                class="text-[#353535] bg-[#DFE8FF] inline-block px-[18px] py-2 rounded-sm font-semibold text-xl">
+                                <span>Postal code</span>
+                                <span class="bg-white rounded-sm px-4">Radius</span>
+                            </div>
+                            <!-- what icon -->
+                            <div class="relative group">
+                                <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                <p
+                                    class="absolute left-5 hidden group-hover:block -top-14 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                    Customers outside this area will not be able to place orders for delivery from this
+                                    location.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-2 gap-6 pb-12 border-b-8 border-[#D7D7D7]">
+                            <div>
+                                <input type="number" placeholder="0"
+                                    class="border placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <select name="" id=""
+                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                    <option value="1" disabled selected>1</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                </select>
+                            </div>
+                            <p class="text-[#656565]">Radius uses straight line distance</p>
+                        </div>
+                        <div class="mt-7 mb-1 flex gap-2 items-end">
+                            <h4 class="text-[26px] text-[#353535] font-semibold">Estimated delivery time</h4>
+                            <div class="relative group mb-1">
+                                <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                <p
+                                    class="absolute left-5 hidden group-hover:block -top-10 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                    The time it takes an order to get to the customer’s door, after the courier picks it
+                                    up from this location</p>
+                            </div>
+                        </div>
+                        <!-- 2nd option -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <input type="number" placeholder="0"
+                                    class="border w-[250px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <select name="" id=""
+                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                    <option value="1" disabled selected>minutes</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                </select>
+                            </div>
+                            <span class="text-xl text-[#656565]">to</span>
+                            <div>
+                                <input type="number" placeholder="0"
+                                    class="border w-[250px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <select name="" id=""
+                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                    <option value="1" disabled selected>minutes</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- 4th fild -->
+                        <div>
+                            <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Delivery fee</h3>
+                            <select name="" id=""
+                                class="border rounded-sm w-1/2 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                <option value="1" disabled selected>Free Delivery</option>
+                                <option value="1">yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <!-- 5th fild -->
+                        <div>
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-between w-full">
+                                    <div class="flex items-center ">
+                                        <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Service fee</h3>
+                                        <!-- what icon -->
+                                        <div class="relative group">
+                                            <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
+                                            <p
+                                                class="absolute hidden left-7 group-hover:block top-3 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                                Customers outside this area will not be able to place orders for
+                                                delivery
+                                                from
+                                                this
+                                                location.</p>
+                                        </div>
+                                    </div>
+                                    <label for="toggle"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggle" class="sr-only peer">
+                                        <span
+                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <!-- input fild -->
+                            <div class="flex items-center gap-2 border-b-8 border-[#D7D7D7] pb-11">
+                                <input type="text" placeholder="AED 0.00"
+                                    class="border w-1/2 placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative w-1/2">
+                                    <select name="" id=""
+                                        class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                        <option value="1" disabled selected>Set Amount</option>
+                                        <option value="1">10</option>
+                                        <option value="1">20</option>
+                                        <option value="1">30</option>
+                                        <option value="1">40</option>
+                                    </select>
+                                    <i
+                                        class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 6th -->
+                        <div>
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-between w-full">
+                                    <div class="flex items-center ">
+                                        <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Minimum order
+                                            amount
+                                        </h3>
+                                        <!-- what icon -->
+                                        <div class="relative group">
+                                            <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
+                                            <p
+                                                class="absolute hidden left-7 group-hover:block top-3 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                                Customers outside this area will not be able to place orders for
+                                                delivery
+                                                from
+                                                this
+                                                location.</p>
+                                        </div>
+                                    </div>
+                                    <label for="toggl"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggl" class="sr-only peer">
+                                        <span
+                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <!-- input fild -->
+                            <div class="flex items-center gap-2 border-b-8 border-[#D7D7D7] pb-6">
+                                <input type="text" placeholder="AED 0.00"
+                                    class="border w-1/2 placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                            </div>
+                        </div>
+                        <!-- 7th -->
+                        <div>
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-between w-full">
+                                    <div class="flex items-center ">
+                                        <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Minimum order
+                                            amount
+                                        </h3>
+                                        <!-- what icon -->
+                                        <div class="relative group">
+                                            <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
+                                            <p
+                                                class="absolute  left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                                Customers will be able to select no-contact delivery and add
+                                                instructions for the courier at checkout. This option is not shown to
+                                                customers who order alcoholic items</p>
+                                        </div>
+                                    </div>
+                                    <label for="toggle3"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggle3" class="sr-only peer">
+                                        <span
+                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- time -->
+                    <div class="p-10 border rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <div class="flex gap-[14px] items-center mb-10">
+                            <img src="../img/clock.png" class="h-6 w-6" alt="">
+                            <h6 class="text-accent-default font-semibold">TIMING</h6>
+                        </div>
+                        <!-- 1st check -->
+                        <div class="border-b-8 border-[#D7D7D7] pb-10">
+                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Estimated delivery time</h4>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <p class="text-[22px] text-[#353535]">Orders are delivered at
+                                    specific times (e.g. 12:30 pm)</p>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio" checked>
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <p class="text-[22px] text-[#353535]">Orders are delivered any time during my delivery
+                                    hours (e.g. 9:00 am - 5:00 pm)</p>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio">
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 2nd check -->
+                        <div class="border-b-8 border-[#D7D7D7] py-10">
+                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">If a customer places an order
+                                during your fulfillment hours, what is the soonest that the order can be delivered?</h4>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <p class="text-[22px] text-[#353535]">The same day they place the order</p>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio2" checked>
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <p class="text-[22px] text-[#353535]">On a following day (i.e. one or more days in the
+                                    future)</p>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio2">
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 3nd check -->
+                        <div class="border-b-8 border-[#D7D7D7] py-10">
+                            <div class="flex items-center gap-1">
+                                <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you start preparing orders
+                                    as soon as they are received?</h4>
+                                <div class="relative group">
+                                    <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                    <p
+                                        class="absolute -left-56 hidden group-hover:block -top-20 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                        If you wait until a certain time of day to review your orders, and start
+                                        preparing them afterwards, consider the second option. Otherwise choose the
+                                        first option.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <p class="text-[22px] text-[#353535]">I generally start preparing orders as soon as they
+                                    are received</p>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio3" checked>
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <div class="flex items-center">
+                                    <p class="text-[22px] text-[#353535]">I only start preparing orders after a certain
+                                        time</p>
+                                    <div class="relative group">
+                                        <img src="../img/what.png" class="h-[18px] ml-1 w-[18px]" alt="">
+                                        <p
+                                            class="absolute left-5 hidden group-hover:block -top-5 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                            Customers placing orders after this time will be shown a pickup time on the
+                                            next available fulfillment day. E.g. if you enter 10:00 am, customers
+                                            ordering after 10:00 am will see a pickup time on the next day.</p>
+                                    </div>
+                                </div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-radio3">
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 4th check -->
+                        <div class="border-b-8 border-[#D7D7D7] py-10">
+                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">How much time do you need to
+                                prepare an order for pickup or delivery?</h4>
+                            <input type="text" placeholder="How much time does it take to prepare this item?"
+                                class="w-full border placeholder:text-[#74777E] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                        </div>
+                        <!-- 5th -->
+                        <div class="border-b-8 border-[#D7D7D7] py-10">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you want to let customers
+                                    schedule delivery orders for future days?</h4>
+                                <label for="toggle3"
+                                    class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                                    <input type="checkbox" id="toggle3" class="sr-only peer">
+                                    <span
+                                        class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <p class="text-[#353535] text-[22px]">Can be scheduled up to</p>
+                                <input placeholder="0" type="number"
+                                    class="w-[130px] border placeholder:text-[#74777E] text-[25px] rounded-sm py-4 px-5 border-[#74777E]">
+                                <p class="text-[#353535] text-[22px]">calendar days in advance</p>
+                            </div>
+                            <p class="text-[22px] mt-1 text-[#74777E]">0 days minimum; 365 days maximum</p>
+                        </div>
+                        <!-- 6th -->
+                        <div class="border-b-8 border-[#D7D7D7] py-10">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you want SpreadX to
+                                        limit
+                                        the number of orders that can be picked up or delivered at the same time?</h4>
+                                    <!-- what icon -->
+                                    <!-- <div class="relative group">
+                                        <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
+                                        <p
+                                            class="absolute  left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                            Customers will be able to select no-contact delivery and add
+                                            instructions for the courier at checkout. This option is not shown to
+                                            customers who order alcoholic items</p>
+                                    </div> -->
+                                </div>
+                                <label for="toggle4"
+                                    class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
+                                    <input type="checkbox" id="toggle4" class="sr-only peer">
+                                    <span
+                                        class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <p class="text-[#353535] text-[22px]">Allow</p>
+                                <input placeholder="0" type="number"
+                                    class="w-[130px] border placeholder:text-[#74777E] text-[25px] rounded-sm py-4 px-5 border-[#74777E]">
+                                <p class="text-[#353535] text-[22px]">deliveries every 15 minutes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WORKFLOW -->
+                    <div class="p-10 border rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <div class="flex gap-[14px] items-center mb-10">
+                            <img src="../img/workFlow.png" class="h-6 w-6" alt="">
+                            <h6 class="text-accent-default font-semibold">WORKFLOW</h6>
+                        </div>
+                        <!-- 1st check -->
+                        <div class="pb-10">
+                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">When should pickup & delivery
+                                order tickets print?</h4>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <div class="flex items-center">
+                                    <p class="text-[22px] text-[#353535]">Print order tickets based on pickup and
+                                        delivery time</p>
+                                    <!-- what -->
+                                    <div class="relative group">
+                                        <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                        <p
+                                            class="absolute left-5 hidden group-hover:block -top-6 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[400px] rounded-sm text-white">
+                                            Order tickets will print based on how much prep time is required before the
+                                            order is due</p>
+                                    </div>
+                                </div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-rad" checked>
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
+                                <div class="flex items-center">
+                                    <p class="text-[22px] text-[#353535]">Print order tickets when the order is placed
+                                    </p>
+                                    <div class="relative group">
+                                        <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                        <p
+                                            class="absolute hidden left-5 group-hover:block -top-5 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                            All order tickets will print when the order is placed, even if the order is
+                                            scheduled for a future pickup or delivery time</p>
+                                    </div>
+                                </div>
+                                <label class="custom-radio">
+                                    <input type="radio" name="custom-rad">
+                                    <span class="radio-circle"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- FULFILLMENT HOURS -->
+                    <div class="p-10 border rounded-[10px] border-[#CCCCCC] shadow-custom">
+                        <div class="flex gap-[14px] items-center mb-10">
+                            <img src="../img/clock.png" class="h-6 w-6" alt="">
+                            <h6 class="text-accent-default font-semibold">FULFILLMENT HOURS</h6>
+                        </div>
+                        <!-- 1st check -->
+                        <div class="pb-10">
+                            <div class="flex items-center">
+                                <h4 class="text-[26px] text-[#353535] font-semibold mb-4">When do you plan to fulfill
+                                    orders?</h4>
+                                <div class="flex items-center">
+                                    <!-- what -->
+                                    <div class="relative group">
+                                        <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
+                                        <p
+                                            class="absolute left-5 hidden group-hover:block -top-6 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[400px] rounded-sm text-white">
+                                            Order tickets will print based on how much prep time is required before the
+                                            order is due</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- days -->
+                            <div class="flex flex-col gap-4">
+                                <!-- 1st -->
+                                <div>
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" id="customCheckbox" class="peer hidden">
+                                    <!-- Custom Label -->
+                                    <label for="customCheckbox"
+                                        class="relative cursor-pointer w-10 h-10 bg-gray-200 rounded-md flex items-center justify-center transition-all duration-300 peer-checked:bg-blue-500">
+                                        <!-- Checkmark Icon -->
+                                        <i class="fa-solid fa-check text-white opacity-0 transition-opacity duration-300 peer-checked:opacity-100"></i>
+                                    </label>
+                                </div>
+                                
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fontawesome icon -->
+    <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

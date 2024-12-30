@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-istok">
+    <!-- section 1 -->
+    <section class="flex h-screen">
+        <!-- side bar -->
+        <div class="w-[30%] bg-primary-default h-screen relative">
+            <!-- top -->
+            <div class="flex pr-5 pl-[15px] py-[11px] items-center justify-between">
+                <!-- logo -->
+                <div class="w-[164px] h-[58px]">
+                    <img src="../img/Logo.png" alt="logo" class="w-full h-full object-cover ">
+                </div>
+                <!-- toggle -->
+                <div>
+                    <label for="check"
+                        class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
+                        <input type="checkbox" id="check" class="sr-only peer">
+                        <span
+                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px]  peer-checked:left-[29px] transition-all duration-500"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- secend -->
+            <div class="bg-primary-secondary flex gap-6 pt-5 pb-2 pl-4 justify-center items-center">
+                <img class="w-[26px] h-[23px]" src="../img/Vector (1).png" alt="">
+                <h6 class="text-[19px] text-white">Setting up Your site</h6>
+            </div>
+
+            <!-- bottom section -->
+            <div class="absolute border-t pt-5 pb-2 bottom-0 w-full border-[#FFFFFF80]">
+                <div class="flex items-center gap-[14px] pt-[6px] pb-[3px] px-[6px] ">
+                    <h5
+                        class="text-primary-secondary w-[52px] h-[52px] text-[28px] bg-white font-semibold rounded-md flex items-center justify-center">
+                        O</h5>
+                    <h6 class="text-2xl font-semibold text-white">Online</h6>
+
+                </div>
+            </div>
+        </div>
+        <!-- main conteint -->
+        <div class="relative h-full w-full overflow-y-scroll">
+            <!-- center content -->
+            <div class="px-[160px] py-20 h-[90%]">
+                <!-- top -->
+                <div class="flex items-center pt-[51px] justify-between">
+                    <h5 class="text-2xl font-semibold text-primary-secondary">Set up your Domain</h5>
+                    <a href="publish.html"
+                        class="bg-primary-secondary mb-5 py-[12px] px-[30px] rounded-[7px] text-white text-lg font-semibold">Continue</a>
+                </div>
+                <!-- domain -->
+                <div class="h-full pb-4">
+                    <div
+                        class="flex justify-center px-[55px] flex-col w-full h-full rounded-[16px] border-[#CCCCCC] border">
+                        <div class="bg-[#EBF0FF] rounded-[14px] px-[50px] pt-[54px] pb-11 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex gap-10 items-center">
+                                    <!-- img -->
+                                    <img src="../img/global.png" alt="domain" class=" object-cover">
+                                    <!-- domin -->
+                                    <div>
+                                        <h1 class="text-[#393939] text-[23px] font-semibold">
+                                            https://sample-domain-123.spreadx.ae</h1>
+                                        <p class="text-[23px] text-[#999999]">SpreadX Domain</p>
+                                        <div class="flex mt-[30px] text-[23px] items-center justify-between">
+                                            <div class="flex gap-5">
+                                                <button
+                                                    class="py-2 px-5 bg-primary-default rounded-md text-white">Manage
+                                                    Domain</button>
+                                                <button class="py-2 px-5 bg-primary-default rounded-md text-white">Edit
+                                                    Site</button>
+                                                <button class="py-2 px-5 bg-primary-default rounded-md text-white">View
+                                                    Live
+                                                    Site</button>
+                                            </div>
+                                            <a href="" class="text-primary-secondary font-semibold">PUBLISH</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="toggle1"
+                                    class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                    <input type="checkbox" id="toggle1" class="peer hidden">
+                                    <span
+                                        class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                    <!-- Toggle switch -->
+                                    <span
+                                        class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+
+    <!-- script  -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

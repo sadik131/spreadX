@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-checkbox:checked::before {
+    content: '✔';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+
+  /* Container for custom radio buttons */
+.custom-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Hide the default radio input */
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+/* Style the custom radio button */
+.radio-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* Add the inner circle for the checked state */
+.radio-circle::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+
+/* Change the styles when the radio is checked */
+.custom-radio input[type="radio"]:checked + .radio-circle {
+  background-color: #2C89FF; /* Blue color for selected */
+  border: none;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-circle::after {
+  background-color: white; /* Blue color for inner circle */
+}

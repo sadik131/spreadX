@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-istok">
+    <section class="flex h-screen">
+        <!-- side bar -->
+        <div class="w-[30%] bg-primary-default relative">
+            <!-- top -->
+            <div class="flex pr-5 pl-[15px] py-[11px] items-center justify-between">
+                <!-- logo -->
+                <div class="w-[164px] h-[58px]">
+                    <img src="../img/Logo.png" alt="logo" class="w-full h-full object-cover ">
+                </div>
+                <!-- toggle -->
+                <div>
+                    <label for="check"
+                        class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
+                        <input type="checkbox" id="check" class="sr-only peer">
+                        <span
+                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px]  peer-checked:left-[29px] transition-all duration-500"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- secend -->
+            <div class="bg-primary-secondary flex gap-6 pt-5 pb-2 pl-4 justify-center items-center">
+                <img class="w-[26px] h-[23px]" src="../img/Vector (1).png" alt="">
+                <h6 class="text-[19px] text-white">Setting up Your site</h6>
+            </div>
+
+            <!-- bottom section -->
+            <div class="absolute border-t pt-5 pb-2 bottom-0 w-full border-[#FFFFFF80]">
+                <div class="flex items-center gap-[14px] pt-[6px] pb-[3px] px-[6px] ">
+                    <h5
+                        class="text-primary-secondary w-[52px] h-[52px] text-[28px] bg-white font-semibold rounded-md flex items-center justify-center">
+                        O</h5>
+                    <h6 class="text-2xl font-semibold text-white">Online</h6>
+
+                </div>
+            </div>
+        </div>
+        <!-- main conteint -->
+        <div class="relative w-full">
+            <!-- center content -->
+            <div class="px-[160px] py-20 h-[90%]">
+                <!-- top -->
+                <div class="flex items-center justify-between">
+                    <h5 class="text-2xl font-semibold text-primary-secondary">Add products to your site</h5>
+                    <a href="setting.html"
+                        class="bg-primary-secondary mb-5 py-[12px] px-[30px] rounded-[7px] text-white text-lg font-semibold">Continue</a>
+                </div>
+                <div class="border rounded-[15px] w-full h-full pl-6 pr-[105px]">
+                    <!-- add product -->
+                    <div class="flex justify-between mt-10">
+                        <!-- left -->
+                        <div>
+                            <h1 class="text-[33px] font-semibold">Products</h1>
+                            <h4 class="underline text-[21px]">Learn more</h4>
+                            <!-- filter -->
+                            <div class="flex gap-2 mt-5">
+                                <h3 class="bg-[#EDEFF3] py-[10px] px-[13px] text-[17px] text-accent-secondary">
+                                    <strong>Type:</strong> Physical X
+                                </h3>
+                                <div
+                                    class="flex items-center gap-4 font-medium py-[10px] px-[13px] text-[17px] text-accent-secondary">
+                                    <i class="fa-solid fa-plus"></i> Add filter
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="">
+                            <div class="flex gap-1">
+                                <button
+                                class="text-[19px] flex items-center font-semibold text-primary-secondary bg-[#EBEBEB] px-6 py-[10px] rounded-3xl"><span
+                                    class="mr-[10px] bg-primary-secondary text-white  rounded-full h-7 w-7 flex items-center justify-center"><i
+                                        class="fa-solid fa-plus"></i></span>Add
+                                from Products Master</button>
+                            <button
+                                class="text-[19px] items-center font-semibold text-white bg-gradient-to-r from-[#013576] to-[#2C5E9D]  flex px-6 py-[10px] rounded-3xl">
+                                <span
+                                    class="mr-[10px] bg-white text-[#013576] rounded-full h-7 w-7 flex items-center justify-center">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
+                                <span>Add Product</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- export -->
+                     <div class="mt-8 flex items-center mb-6">
+                        <h4 class="text-2xl mr-9">2 Products</h4>
+                        <!-- export -->
+                        <div class="flex items-center gap-[15px] text-primary-accent text-2xl">
+                            <img src="../img/import.png" alt="">
+                            <h4>Export</h4>
+                            <img src="../img/down-arrow.png" alt="">
+                        </div>
+                        <!-- Import -->
+                        <div class="flex items-center gap-[15px] text-primary-accent text-2xl ml-9">
+                            <img src="../img/export.png" alt="">
+                            <h4>Import</h4>
+                            <img src="../img/down-arrow.png" alt="">
+                        </div>
+                     </div>
+                     
+                    <!-- table -->
+                    <div class="overflow-x-auto">
+                        <table class="table-auto w-full text-left border-collapse">
+                            <thead class="text-primary-accent text-xl border-b font-semibold">
+                                <tr>
+                                    <th class="p-4">
+                                        <input type="checkbox"
+                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                    </th>
+                                    <th></th>
+                                    <th class="p-4">Name</th>
+                                    <th class="p-4">Type</th>
+                                    <th class="p-4">Category</th>
+                                    <th class="p-4">Brand</th>
+                                    <th class="p-4">Price</th>
+                                    <th class="p-4">Inventory</th>
+                                    <th class="p-4"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-[#393939] text-xl">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-4">
+                                        <input type="checkbox"
+                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                    </td>
+                                    <td class="p-4 flex items-center gap-2">
+                                        <div
+                                            class="w-[61px] h-[61px] bg-[#AEAEAE] rounded-sm flex items-center justify-center text-[21px] text-white font-bold">
+                                            Ti</div>
+                                    </td>
+                                    <td class="p-4">Tissue</td>
+                                    <td class="p-4">Physical</td>
+                                    <td class="p-4">Default</td>
+                                    <td class="p-4">&nbsp;</td>
+                                    <td class="p-4">AED 5.00</td>
+                                    <td class="p-4">In stock</td>
+                                    <td class=" text-right">
+                                        <button class="text-primary-secondary border border-primary-secondary h-10 w-10 flex gap-1 justify-center items-center rounded-md text-2xl">
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 mt-4">
+                                    <td class="p-4">
+                                        <input type="checkbox"
+                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                    </td>
+                                    <td class="p-4 flex gap-2">
+                                        <img src="../img/bottol.png" alt="Bottle"
+                                            class="w-[61px] h-[61px] object-cover rounded">
+                                    </td>
+                                    <td class="p-4">Bottled Water</td>
+                                    <td class="p-4">Physical</td>
+                                    <td class="p-4">Default</td>
+                                    <td class="p-4">&nbsp;</td>
+                                    <td class="p-4">AED 5.00</td>
+                                    <td class="p-4">In stock</td>
+                                    <td class=" text-right">
+                                        <button class="text-primary-secondary border border-primary-secondary h-10 w-10 flex gap-1 justify-center items-center rounded-md text-2xl">
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                            <span class="h-1 w-1 rounded-full bg-primary-secondary"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
