@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}","./*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        'xl': {'max': '1650px'}, 
+      },
       borderRadius: {
         "sm":"5px",
       },

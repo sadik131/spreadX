@@ -17,44 +17,72 @@
 <body class="font-istok">
     <section class="flex h-screen">
         <!-- side bar -->
-        <div class="w-[30%] bg-primary-default relative">
-            <!-- top -->
-            <div class="flex pr-5 pl-[15px] py-[11px] items-center justify-between">
-                <!-- logo -->
-                <div class="w-[164px] h-[58px]">
-                    <img src="../img/Logo.png" alt="logo" class="w-full h-full object-cover ">
+        <div id="sidebar" class="w-[30%] bg-primary-default h-screen relative transition-all duration-500">
+            <div class="fixed top-0  flex items-center justify-between p-5">
+                <!-- Logo -->
+                <div id="lgLogo" class="w-[164px] h-[58px] ">
+                    <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
                 </div>
-                <!-- toggle -->
-                <div>
-                    <label for="check"
+            </div>
+            <div class="flex items-center justify-between p-5">
+                <!-- Logo -->
+                <div id="smLogo" class="hidden w-[164px] h-[58px]">
+                    <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <ul id="menu-items" class="mt-12 overflow-y-scroll text-white">
+
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/home3.png" alt="Dashboard" class="">
+                    <span class="text-[19px]">Dashboard</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (4).png" alt="Products" class="">
+                    <span class="text-[19px]">Products</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (5).png" alt="Inventory" class="">
+                    <span class="text-[19px]">Inventory</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (6).png" alt="Sales" class="">
+                    <span class="text-[19px]">Sales</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (7).png" alt="Customers" class="">
+                    <span class="text-[19px]">Customers</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (8).png" alt="Settings" class="">
+                    <span class="text-[19px]">Settings</span>
+                </li>
+            </ul>
+
+            <div class="fixed bottom-0 w-full bg py-4">
+                <div class="px-5 flex items-center py-5">
+                    <label for="check" id="toggle-btn"
                         class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
-                        <input type="checkbox" id="check" class="sr-only peer">
+                        <input type="checkbox" id="check" checked class="sr-only peer">
                         <span
-                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px]  peer-checked:left-[29px] transition-all duration-500"></span>
+                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500"></span>
                     </label>
                 </div>
-            </div>
-            <!-- secend -->
-            <div class="bg-primary-secondary flex gap-6 pt-5 pb-2 pl-4 justify-center items-center">
-                <img class="w-[26px] h-[23px]" src="../img/Vector (1).png" alt="">
-                <h6 class="text-[19px] text-white">Setting up Your site</h6>
-            </div>
-
-            <!-- bottom section -->
-            <div class="absolute border-t pt-5 pb-2 bottom-0 w-full border-[#FFFFFF80]">
-                <div class="flex items-center gap-[14px] pt-[6px] pb-[3px] px-[6px] ">
-                    <h5
-                        class="text-primary-secondary w-[52px] h-[52px] text-[28px] bg-white font-semibold rounded-md flex items-center justify-center">
-                        O</h5>
-                    <h6 class="text-2xl font-semibold text-white">Online</h6>
-
+                <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
+                    <div class="flex px-5 py-5 items-center gap-3">
+                        <div
+                            class="bg-white text-primary-secondary w-[40px] h-[40px] rounded-md flex items-center justify-center font-bold">
+                            O
+                        </div>
+                        <span id="status-text" class="text text-white text-lg">Online</span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- main conteint -->
-        <div class="relative w-full">
+        <div class="relative w-full overflow-y-scroll">
             <!-- center content -->
-            <div class="px-[160px] py-20 h-[90%]">
+            <div class="xl:px-10 px-[160px] py-20 ">
                 <!-- top -->
                 <div class="flex items-center justify-between">
                     <h5 class="text-2xl font-semibold text-primary-secondary">Set up your payment methods</h5>
@@ -78,8 +106,13 @@
                             <thead class="text-primary-accent text-xl border-b font-semibold">
                                 <tr>
                                     <th class="p-4">
-                                        <input type="checkbox"
-                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                        <label class="form-checkbox-wrapper relative">
+                                            <input id="select-all" type="checkbox" class="form-checkbox hidden">
+                                            <span
+                                                class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                <i class="fa-solid fa-check hidden text-white"></i>
+                                            </span>
+                                        </label>
                                     </th>
                                     <th></th>
                                     <th class="p-4">Name</th>
@@ -91,8 +124,13 @@
                             <tbody class="text-[#393939] text-xl">
                                 <tr class="hover:bg-gray-50">
                                     <td class="p-4">
-                                        <input type="checkbox"
-                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                        <label class="form-checkbox-wrapper relative">
+                                            <input type="checkbox" class="form-checkbox row-checkbox hidden">
+                                            <span
+                                                class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                <i class="fa-solid fa-check hidden text-white"></i>
+                                            </span>
+                                        </label>
                                     </td>
                                     <td class="p-4 flex items-center gap-2">
                                         <div
@@ -117,8 +155,13 @@
                                 <!-- 2nd -->
                                 <tr class="hover:bg-gray-50">
                                     <td class="p-4">
-                                        <input type="checkbox"
-                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                        <label class="form-checkbox-wrapper relative">
+                                            <input type="checkbox" class="form-checkbox row-checkbox hidden">
+                                            <span
+                                                class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                <i class="fa-solid fa-check hidden text-white"></i>
+                                            </span>
+                                        </label>
                                     </td>
                                     <td class="p-4 flex items-center gap-2">
                                         <div
@@ -132,7 +175,8 @@
                                         <label for="toggle2"
                                             class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
                                             <!-- Input with peer class -->
-                                            <input type="checkbox" checked id="toggle2" class="peer absolute opacity-0 w-0 h-0">
+                                            <input type="checkbox" checked id="toggle2"
+                                                class="peer absolute opacity-0 w-0 h-0">
                                             <!-- Background reacts to peer-checked -->
                                             <span
                                                 class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
@@ -141,13 +185,18 @@
                                                 class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                         </label>
                                     </td>
-                                    
+
                                 </tr>
                                 <!-- 3rd -->
                                 <tr class="hover:bg-gray-50">
                                     <td class="p-4">
-                                        <input type="checkbox"
-                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                        <label class="form-checkbox-wrapper relative">
+                                            <input type="checkbox" class="form-checkbox row-checkbox hidden">
+                                            <span
+                                                class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                <i class="fa-solid fa-check hidden text-white"></i>
+                                            </span>
+                                        </label>
                                     </td>
                                     <td class="p-4 flex items-center gap-2">
                                         <div
@@ -160,7 +209,8 @@
                                     <td class="text-right">
                                         <label for="toggle3"
                                             class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
-                                            <input type="checkbox" checked id="toggle3" class="peer absolute opacity-0 w-0 h-0">
+                                            <input type="checkbox" checked id="toggle3"
+                                                class="peer absolute opacity-0 w-0 h-0">
                                             <span
                                                 class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
                                             <!-- Toggle switch -->
@@ -168,13 +218,18 @@
                                                 class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                         </label>
                                     </td>
-                                    
+
                                 </tr>
                                 <!-- 4th -->
                                 <tr class="hover:bg-gray-50">
                                     <td class="p-4">
-                                        <input type="checkbox"
-                                            class="form-checkbox h-7 w-7 border-primary-accent appearance-none border checked:bg-blue-500 checked:border-blue-500 focus:outline-none rounded">
+                                        <label class="form-checkbox-wrapper relative">
+                                            <input type="checkbox" class="form-checkbox row-checkbox hidden">
+                                            <span
+                                                class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                <i class="fa-solid fa-check hidden text-white"></i>
+                                            </span>
+                                        </label>
                                     </td>
                                     <td class="p-4 flex items-center gap-2">
                                         <div
@@ -188,7 +243,8 @@
                                         <label for="toggle4"
                                             class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
                                             <!-- Input with peer class -->
-                                            <input type="checkbox" checked id="toggle4" class="peer absolute opacity-0 w-0 h-0">
+                                            <input type="checkbox" checked id="toggle4"
+                                                class="peer absolute opacity-0 w-0 h-0">
                                             <!-- Background reacts to peer-checked -->
                                             <span
                                                 class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
@@ -197,9 +253,9 @@
                                                 class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                         </label>
                                     </td>
-                                    
+
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -211,6 +267,8 @@
 
     </section>
 
+    <!-- script -->
+     <script src="../script.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
 </body>

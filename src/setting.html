@@ -17,37 +17,64 @@
 <body class="font-istok">
     <section class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-[30%] bg-primary-default h-screen relative">
-            <!-- Top -->
-            <div class="flex pr-5 pl-[15px] py-[11px] items-center justify-between">
+        <div id="sidebar" class="w-[30%] bg-primary-default h-screen relative transition-all duration-500">
+            <div class="fixed top-0  flex items-center justify-between p-5">
                 <!-- Logo -->
-                <div class="w-[164px] h-[58px]">
-                    <img src="../img/Logo.png" alt="logo" class="w-full h-full object-cover">
+                <div id="lgLogo" class="w-[164px] h-[58px] ">
+                    <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
                 </div>
-                <!-- Toggle -->
-                <div>
-                    <label for="check"
+            </div>
+            <div class="flex items-center justify-between p-5">
+                <!-- Logo -->
+                <div id="smLogo" class="hidden w-[164px] h-[58px]">
+                    <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <ul id="menu-items" class="mt-12 overflow-y-scroll text-white">
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/home3.png" alt="Dashboard" class="">
+                    <span class="text-[19px]">Dashboard</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (4).png" alt="Products" class="">
+                    <span class="text-[19px]">Products</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (5).png" alt="Inventory" class="">
+                    <span class="text-[19px]">Inventory</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (6).png" alt="Sales" class="">
+                    <span class="text-[19px]">Sales</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (7).png" alt="Customers" class="">
+                    <span class="text-[19px]">Customers</span>
+                </li>
+                <li class="flex items-center gap-7 pl-[30px] py-6">
+                    <img src="../img/Vector (8).png" alt="Settings" class="">
+                    <span class="text-[19px]">Settings</span>
+                </li>
+            </ul>
+
+            <div class="fixed bottom-0 w-full bg py-4">
+                <div class="px-5 flex items-center py-5">
+                    <label for="check" id="toggle-btn"
                         class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
-                        <input type="checkbox" id="check" class="sr-only peer">
+                        <input type="checkbox" id="check" checked class="sr-only peer">
                         <span
                             class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500"></span>
                     </label>
                 </div>
-            </div>
-            <!-- Section -->
-            <div class="bg-primary-secondary flex gap-6 pt-5 pb-2 pl-4 justify-center items-center">
-                <img class="w-[26px] h-[23px]" src="../img/Vector (1).png" alt="">
-                <h6 class="text-[19px] text-white">Setting up Your site</h6>
-            </div>
-
-            <!-- Bottom Section -->
-            <div class="absolute border-t pt-5 pb-2 bottom-0 w-full border-[#FFFFFF80]">
-                <div class="flex items-center gap-[14px] pt-[6px] pb-[3px] px-[17px]">
-                    <h5
-                        class="text-primary-secondary w-[52px] h-[52px] text-[28px] bg-white font-semibold rounded-sm flex items-center justify-center">
-                        O
-                    </h5>
-                    <h6 class="text-2xl font-semibold text-white">Online</h6>
+                <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
+                    <div class="flex px-5 py-5 items-center gap-3">
+                        <div
+                            class="bg-white text-primary-secondary w-[40px] h-[40px] rounded-md flex items-center justify-center font-bold">
+                            O
+                        </div>
+                        <span id="status-text" class="text text-white text-lg">Online</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,24 +82,27 @@
         <!-- Main Content -->
         <div class="relative w-full overflow-y-scroll">
             <!-- Center Content -->
-            <div class="px-[50px] h-full">
+            <div class="xl:px-10 px-[160px] py-20">
                 <!-- Top -->
                 <div class="flex items-center justify-between">
                     <h5 class="text-2xl font-semibold text-primary-secondary">Configure your delivery settings</h5>
                     <a href="payment.html"
                         class="bg-primary-secondary mb-5 py-2 px-[20px] rounded text-white text-lg font-semibold">Continue</a>
                 </div>
-                <div class="border rounded-[16px] w-full py-16 px-[165px] flex flex-col gap-[15px]">
+                <div class="border rounded-[16px] w-full py-16 xl:px-10 px-[165px] flex flex-col gap-[15px]">
                     <!-- 1st -->
                     <div
                         class="p-10 border flex justify-between items-center rounded-[10px] border-[#CCCCCC] shadow-custom">
                         <h4 class="text-[26px] text-[#353535] font-semibold">Do you want to offer <span>
                                 delivery?</span></h4>
                         <label for="toggle1"
-                            class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                            <input type="checkbox" id="toggle1" class="sr-only peer">
+                            class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                            <input type="checkbox" id="toggle1" class="peer hidden">
                             <span
-                                class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                            <!-- Toggle switch -->
+                            <span
+                                class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                         </label>
                     </div>
                     <!-- 2nd -->
@@ -86,10 +116,13 @@
                                 times</p>
                         </div>
                         <label for="toggle2"
-                            class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                            <input type="checkbox" id="toggle2" class="sr-only peer">
+                            class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                            <input type="checkbox" id="toggle2" class="peer hidden">
                             <span
-                                class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                            <!-- Toggle switch -->
+                            <span
+                                class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                         </label>
                     </div>
                     <!-- 3rd -->
@@ -126,6 +159,7 @@
                                     <option value="1">4</option>
                                     <option value="1">5</option>
                                 </select>
+
                             </div>
                             <p class="text-[#656565]">Radius uses straight line distance</p>
                         </div>
@@ -140,42 +174,63 @@
                             </div>
                         </div>
                         <!-- 2nd option -->
-                        <div class="flex items-center justify-between">
-                            <div>
+                        <div class="flex items-center">
+                            <div class="flex items gap-2">
                                 <input type="number" placeholder="0"
-                                    class="border w-[250px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
-                                <select name="" id=""
-                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
-                                    <option value="1" disabled selected>minutes</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                    <option value="1">4</option>
-                                    <option value="1">5</option>
-                                </select>
+                                    class="border w-[200px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative w-[30%]">
+                                    <select name="" id=""
+                                        class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                        <option value="1" disabled selected>minutes</option>
+                                        <option value="1">10</option>
+                                        <option value="1">20</option>
+                                        <option value="1">30</option>
+                                        <option value="1">40</option>
+                                    </select>
+                                    <i
+                                        class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                                </div>
                             </div>
                             <span class="text-xl text-[#656565]">to</span>
-                            <div>
+                            <div class="flex items gap-2">
                                 <input type="number" placeholder="0"
-                                    class="border w-[250px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
-                                <select name="" id=""
+                                    class="border w-[200px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative">
+                                    <select name="" id=""
+                                        class="appearance-none w-[30%] border rounded-sm placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                        <option value="1" disabled selected>minutes</option>
+                                        <option value="1">10</option>
+                                        <option value="1">20</option>
+                                        <option value="1">30</option>
+                                        <option value="1">40</option>
+                                    </select>
+                                    <i
+                                        class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                                </div>
+                                <!-- <select name="" id=""
                                     class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
-                                    <option value="1" disabled selected>minutes</option>
+                                    <option value="1" disabled selected></option>
                                     <option value="1">2</option>
                                     <option value="1">3</option>
                                     <option value="1">4</option>
                                     <option value="1">5</option>
-                                </select>
+                                </select> -->
                             </div>
                         </div>
                         <!-- 4th fild -->
                         <div>
                             <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Delivery fee</h3>
-                            <select name="" id=""
-                                class="border rounded-sm w-1/2 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
-                                <option value="1" disabled selected>Free Delivery</option>
-                                <option value="1">yes</option>
-                                <option value="1">No</option>
-                            </select>
+                            <div class="relative w-[60%]">
+                                <select name="" id=""
+                                    class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                    <option value="1" disabled selected>Free delivery</option>
+                                    <option value="1">Yes</option>
+                                    <option value="1">No</option>
+
+                                </select>
+                                <i
+                                    class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                            </div>
                         </div>
                         <!-- 5th fild -->
                         <div>
@@ -195,11 +250,14 @@
                                                 location.</p>
                                         </div>
                                     </div>
-                                    <label for="toggle"
-                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                                        <input type="checkbox" id="toggle" class="sr-only peer">
+                                    <label for="toggle3"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggle3" class="peer hidden">
                                         <span
-                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                            class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                        <!-- Toggle switch -->
+                                        <span
+                                            class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                     </label>
                                 </div>
 
@@ -242,11 +300,14 @@
                                                 location.</p>
                                         </div>
                                     </div>
-                                    <label for="toggl"
-                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                                        <input type="checkbox" id="toggl" class="sr-only peer">
+                                    <label for="toggle4"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggle4" class="peer hidden">
                                         <span
-                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                            class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                        <!-- Toggle switch -->
+                                        <span
+                                            class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                     </label>
                                 </div>
 
@@ -269,17 +330,20 @@
                                         <div class="relative group">
                                             <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
                                             <p
-                                                class="absolute  left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
+                                                class="absolute hidden left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
                                                 Customers will be able to select no-contact delivery and add
                                                 instructions for the courier at checkout. This option is not shown to
                                                 customers who order alcoholic items</p>
                                         </div>
                                     </div>
-                                    <label for="toggle3"
-                                        class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                                        <input type="checkbox" id="toggle3" class="sr-only peer">
+                                    <label for="toggle5"
+                                        class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                        <input type="checkbox" id="toggle5" class="peer hidden">
                                         <span
-                                            class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                            class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                        <!-- Toggle switch -->
+                                        <span
+                                            class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                     </label>
                                 </div>
                             </div>
@@ -383,13 +447,17 @@
                         <!-- 5th -->
                         <div class="border-b-8 border-[#D7D7D7] py-10">
                             <div class="flex items-center justify-between">
-                                <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you want to let customers
+                                <h4 class="text-[26px] w-[95%] text-[#353535] font-semibold mb-4">Do you want to let
+                                    customers
                                     schedule delivery orders for future days?</h4>
-                                <label for="toggle3"
-                                    class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                                    <input type="checkbox" id="toggle3" class="sr-only peer">
+                                <label for="toggle6"
+                                    class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                    <input type="checkbox" id="toggle6" class="peer hidden">
                                     <span
-                                        class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                        class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                    <!-- Toggle switch -->
+                                    <span
+                                        class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                 </label>
                             </div>
                             <div class="flex items-center gap-10">
@@ -406,22 +474,26 @@
                                 <div class="flex items-center">
                                     <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you want SpreadX to
                                         limit
-                                        the number of orders that can be picked up or delivered at the same time?</h4>
-                                    <!-- what icon -->
-                                    <!-- <div class="relative group">
-                                        <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
-                                        <p
-                                            class="absolute  left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
-                                            Customers will be able to select no-contact delivery and add
-                                            instructions for the courier at checkout. This option is not shown to
-                                            customers who order alcoholic items</p>
-                                    </div> -->
+                                        the number of orders that can be picked up or delivered at the same time?
+                                        <!-- what icon -->
+                                        <div class="relative group inline-block">
+                                            <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
+                                            <p
+                                                class="absolute  left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2  rounded-sm text-white text-[11px] hidden">
+                                                We'll automatically space out delivery orders so you don't get
+                                                overwhelmed
+                                            </p>
+                                        </div>
+                                    </h4>
                                 </div>
-                                <label for="toggle4"
-                                    class="relative cursor-pointer w-12 h-5 bg-[#AED2FF] rounded-full flex items-center">
-                                    <input type="checkbox" id="toggle4" class="sr-only peer">
+                                <label for="toggle6"
+                                    class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                    <input type="checkbox" id="toggle6" class="peer hidden">
                                     <span
-                                        class="w-[33px] h-[33px] bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                        class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                    <!-- Toggle switch -->
+                                    <span
+                                        class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
                                 </label>
                             </div>
                             <div class="flex items-center gap-10">
@@ -508,18 +580,103 @@
                             <!-- days -->
                             <div class="flex flex-col gap-4">
                                 <!-- 1st -->
-                                <div>
-                                    <!-- Hidden Checkbox -->
-                                    <input type="checkbox" id="customCheckbox" class="peer hidden">
-                                    <!-- Custom Label -->
-                                    <label for="customCheckbox"
-                                        class="relative cursor-pointer w-10 h-10 bg-gray-200 rounded-md flex items-center justify-center transition-all duration-300 peer-checked:bg-blue-500">
-                                        <!-- Checkmark Icon -->
-                                        <i class="fa-solid fa-check text-white opacity-0 transition-opacity duration-300 peer-checked:opacity-100"></i>
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
                                     </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Sunday</h3>
+                                    <input placeholder="9:00am" disabled type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input placeholder="5:00pm" type="number" disabled
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
                                 </div>
-                                
-                                
+                                <!-- 2nd -->
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
+                                    </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Monday</h3>
+                                    <input placeholder="9:00am" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input placeholder="5:00pm" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                </div>
+
+                                <!-- 3rd -->
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
+                                    </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Tuesday</h3>
+                                    <input placeholder="9:00am" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input placeholder="5:00pm" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                </div>
+                                <!-- 4th -->
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
+                                    </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Wednessday</h3>
+                                    <input placeholder="9:00am" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input placeholder="5:00pm" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                </div>
+                                <!-- 5th -->
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
+                                    </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Friday</h3>
+                                    <input placeholder="9:00am" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input placeholder="5:00pm" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                </div>
+                                <!-- 6th -->
+                                <div class="flex items-center">
+                                    <label class="form-checkbox-wrapper relative">
+                                        <input type="checkbox" class="form-checkbox hidden">
+                                        <span
+                                            class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                            <i class="fa-solid fa-check hidden text-white"></i>
+                                        </span>
+                                    </label>
+                                    <h3 class="px-7 text-[22px] font-semibold">Saterday</h3>
+                                    <input disabled placeholder="9:00am" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                    <h3 class="text-lg px-3">to</h3>
+                                    <input disabled placeholder="5:00pm" type="number"
+                                        class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                </div>
+                                <!-- 7th -->
                             </div>
 
                         </div>
@@ -529,6 +686,8 @@
         </div>
     </section>
 
+    <!-- script -->
+    <script src="../script.js"></script>
     <!-- fontawesome icon -->
     <script src="https://kit.fontawesome.com/2dfedb0ed0.js" crossorigin="anonymous"></script>
 
