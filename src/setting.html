@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 
 <body class="font-istok">
@@ -19,65 +21,79 @@
         <!-- Sidebar -->
         <div id="sidebar" class="w-[30%] bg-primary-default h-screen relative transition-all duration-500">
             <div class="fixed top-0  flex items-center justify-between p-5">
-                <!-- Logo -->
-                <div id="lgLogo" class="w-[164px] h-[58px] ">
-                    <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
-                </div>
+              <!-- Logo -->
+              <div id="lgLogo" class="w-[164px] h-[58px] ">
+                <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
+              </div>
             </div>
             <div class="flex items-center justify-between p-5">
-                <!-- Logo -->
-                <div id="smLogo" class="hidden w-[164px] h-[58px]">
-                    <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
-                </div>
+              <!-- Logo -->
+              <div id="smLogo" class="hidden w-[164px] h-[58px]">
+                <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
+              </div>
             </div>
-
+      
+            <!-- links -->
             <ul id="menu-items" class="mt-12 overflow-y-scroll text-white">
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/home3.png" alt="Dashboard" class="">
-                    <span class="text-[19px]">Dashboard</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (4).png" alt="Products" class="">
-                    <span class="text-[19px]">Products</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (5).png" alt="Inventory" class="">
-                    <span class="text-[19px]">Inventory</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (6).png" alt="Sales" class="">
-                    <span class="text-[19px]">Sales</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (7).png" alt="Customers" class="">
-                    <span class="text-[19px]">Customers</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (8).png" alt="Settings" class="">
-                    <span class="text-[19px]">Settings</span>
-                </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/home3.png" alt="Dashboard" class="">
+                <span class="text-[19px]">Dashboard</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (4).png" alt="Products" class="">
+                <span class="text-[19px]">Products</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (5).png" alt="Inventory" class="">
+                <span class="text-[19px]">Inventory</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (6).png" alt="Sales" class="">
+                <span class="text-[19px]">Sales</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (7).png" alt="Customers" class="">
+                <span class="text-[19px]">Customers</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (8).png" alt="Settings" class="">
+                <span class="text-[19px]">Messages</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (9).png" alt="Settings" class="">
+                <span class="text-[19px]">Reports</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (10).png" alt="Settings" class="">
+                <span class="text-[19px]">Settings</span>
+              </li>
             </ul>
-
+      
+            <!-- bottom  -->
             <div class="fixed bottom-0 w-full bg py-4">
-                <div class="px-5 flex items-center py-5">
-                    <label for="check" id="toggle-btn"
-                        class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
-                        <input type="checkbox" id="check" checked class="sr-only peer">
-                        <span
-                            class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500"></span>
-                    </label>
+              <div class="px-5 flex items-center gap-3 py-5">
+                <label for="check" id="toggle-btn"
+                  class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
+                  <input type="checkbox" id="check" checked class="sr-only peer">
+                  <span
+                    class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500 flex items-center justify-center">
+                    <img src="../img/arrow.png" alt="" id="arrow" class="w-[12px] h-[12px]">
+                  </span>
+                </label>
+      
+                <h1 id="collapes" class="text-[#939BB9] text-[19px]">COLLAPSE MENU</h1>
+              </div>
+              <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
+                <div class="flex px-5 py-5 items-center gap-3">
+                  <div
+                    class="bg-white text-[28px] text-primary-secondary w-[40px] h-[40px] rounded-md flex justify-center font-bold">
+                    O
+                  </div>
+                  <span id="status-text" class="text text-white text-lg">Online</span>
                 </div>
-                <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
-                    <div class="flex px-5 py-5 items-center gap-3">
-                        <div
-                            class="bg-white text-primary-secondary w-[40px] h-[40px] rounded-md flex items-center justify-center font-bold">
-                            O
-                        </div>
-                        <span id="status-text" class="text text-white text-lg">Online</span>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
+          </div>
 
         <!-- Main Content -->
         <div class="relative w-full overflow-y-scroll">
@@ -148,24 +164,28 @@
                             </div>
                         </div>
                         <div class="flex items-center mt-2 gap-6 pb-12 border-b-8 border-[#D7D7D7]">
-                            <div>
+                            <div class="flex items-center gap-2">
                                 <input type="number" placeholder="0"
-                                    class="border placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
-                                <select name="" id=""
-                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
-                                    <option value="1" disabled selected>1</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                    <option value="1">4</option>
-                                    <option value="1">5</option>
-                                </select>
+                                    class="border placeholder:text-[#181818] w-1/2 text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative w-[50%]">
+                                    <select name="" id=""
+                                        class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 pr-10 px-3 border-[#74777E]">
+                                        <option value="1" disabled selected>Km</option>
+                                        <option value="1">10</option>
+                                        <option value="1">20</option>
+                                        <option value="1">30</option>
+                                        <option value="1">40</option>
+                                    </select>
+                                    <i
+                                        class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                                </div>
 
                             </div>
                             <p class="text-[#656565]">Radius uses straight line distance</p>
                         </div>
-                        <div class="mt-7 mb-1 flex gap-2 items-end">
+                        <div class="mt-7 mb-1 flex gap-2 items-center">
                             <h4 class="text-[26px] text-[#353535] font-semibold">Estimated delivery time</h4>
-                            <div class="relative group mb-1">
+                            <div class="relative group">
                                 <img src="../img/what.png" class="h-[18px] w-[18px]" alt="">
                                 <p
                                     class="absolute left-5 hidden group-hover:block -top-10 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
@@ -174,11 +194,11 @@
                             </div>
                         </div>
                         <!-- 2nd option -->
-                        <div class="flex items-center">
-                            <div class="flex items gap-2">
+                        <div class="flex w-full items-center">
+                            <div class="flex items w-[48%] gap-2">
                                 <input type="number" placeholder="0"
-                                    class="border w-[200px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
-                                <div class="relative w-[30%]">
+                                    class="border w-[60%] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative w-[35%]">
                                     <select name="" id=""
                                         class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
                                         <option value="1" disabled selected>minutes</option>
@@ -192,12 +212,12 @@
                                 </div>
                             </div>
                             <span class="text-xl text-[#656565]">to</span>
-                            <div class="flex items gap-2">
+                            <div class="flex justify-end w-[48%] gap-2">
                                 <input type="number" placeholder="0"
-                                    class="border w-[200px] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
-                                <div class="relative">
+                                    class="border w-[60%] placeholder:text-[#181818] text-[25px] rounded-sm py-2 px-3 border-[#74777E]">
+                                <div class="relative w-[35%]">
                                     <select name="" id=""
-                                        class="appearance-none w-[30%] border rounded-sm placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                        class="appearance-none border rounded-sm w-full placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
                                         <option value="1" disabled selected>minutes</option>
                                         <option value="1">10</option>
                                         <option value="1">20</option>
@@ -207,14 +227,6 @@
                                     <i
                                         class="fa-solid fa-angle-down absolute top-1/2 right-3 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
                                 </div>
-                                <!-- <select name="" id=""
-                                    class="border rounded-sm w-36 placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
-                                    <option value="1" disabled selected></option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                    <option value="1">4</option>
-                                    <option value="1">5</option>
-                                </select> -->
                             </div>
                         </div>
                         <!-- 4th fild -->
@@ -242,12 +254,7 @@
                                         <div class="relative group">
                                             <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
                                             <p
-                                                class="absolute hidden left-7 group-hover:block top-3 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
-                                                Customers outside this area will not be able to place orders for
-                                                delivery
-                                                from
-                                                this
-                                                location.</p>
+                                                class="absolute hidden left-7 group-hover:block top-3 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">Charge a service fee on delivery orders</p>
                                         </div>
                                     </div>
                                     <label for="toggle3"
@@ -292,12 +299,7 @@
                                         <div class="relative group">
                                             <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
                                             <p
-                                                class="absolute hidden left-7 group-hover:block top-3 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
-                                                Customers outside this area will not be able to place orders for
-                                                delivery
-                                                from
-                                                this
-                                                location.</p>
+                                                class="absolute hidden left-7 group-hover:block top-0 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">Require a minimum amount for orders to be eligible for delivery</p>
                                         </div>
                                     </div>
                                     <label for="toggle4"
@@ -323,17 +325,13 @@
                             <div class="flex items-center">
                                 <div class="flex items-center justify-between w-full">
                                     <div class="flex items-center ">
-                                        <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">Minimum order
-                                            amount
+                                        <h3 class="text-[26px] text-[#353535] mt-8 mb-4 font-semibold">No-contact delivery 
                                         </h3>
                                         <!-- what icon -->
                                         <div class="relative group">
                                             <img src="../img/what.png" class="h-[18px] w-[18px] mt-3 ml-2" alt="">
                                             <p
-                                                class="absolute hidden left-7 group-hover:block top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">
-                                                Customers will be able to select no-contact delivery and add
-                                                instructions for the courier at checkout. This option is not shown to
-                                                customers who order alcoholic items</p>
+                                                class="absolute hidden left-7 group-hover:block -top-4 shadow-custom bg-[#A4A4A4] py-1 px-2 w-[475px] rounded-sm text-white">Customers will be able to select no-contact delivery and add instructions for the courier at checkout. This option is not shown to customers who order alcoholic items</p>
                                         </div>
                                     </div>
                                     <label for="toggle5"
@@ -358,7 +356,7 @@
                         </div>
                         <!-- 1st check -->
                         <div class="border-b-8 border-[#D7D7D7] pb-10">
-                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Estimated delivery time</h4>
+                            <h4 class="text-[26px] text-[#353535] font-semibold mb-4">When can orders be delivered?</h4>
                             <div class="flex items-center justify-between border-b border-[#d7d7d7] py-2">
                                 <p class="text-[22px] text-[#353535]">Orders are delivered at
                                     specific times (e.g. 12:30 pm)</p>
@@ -471,7 +469,7 @@
                         <!-- 6th -->
                         <div class="border-b-8 border-[#D7D7D7] py-10">
                             <div class="flex items-center justify-between">
-                                <div class="flex items-center">
+                                <div class="flex items-center w-[95%]">
                                     <h4 class="text-[26px] text-[#353535] font-semibold mb-4">Do you want SpreadX to
                                         limit
                                         the number of orders that can be picked up or delivered at the same time?
@@ -594,6 +592,7 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input placeholder="5:00pm" type="number" disabled
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        
                                 </div>
                                 <!-- 2nd -->
                                 <div class="flex items-center">
@@ -610,6 +609,7 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input placeholder="5:00pm" type="number"
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        <img src="../img/plass.png" class="ml-6" alt="">
                                 </div>
 
                                 <!-- 3rd -->
@@ -627,6 +627,7 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input placeholder="5:00pm" type="number"
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        <img src="../img/plass.png" class="ml-6" alt="">
                                 </div>
                                 <!-- 4th -->
                                 <div class="flex items-center">
@@ -643,6 +644,7 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input placeholder="5:00pm" type="number"
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        <img src="../img/plass.png" class="ml-6" alt="">
                                 </div>
                                 <!-- 5th -->
                                 <div class="flex items-center">
@@ -659,6 +661,7 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input placeholder="5:00pm" type="number"
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        <img src="../img/plass.png" class="ml-6" alt="">
                                 </div>
                                 <!-- 6th -->
                                 <div class="flex items-center">
@@ -675,8 +678,62 @@
                                     <h3 class="text-lg px-3">to</h3>
                                     <input disabled placeholder="5:00pm" type="number"
                                         class="w-[15%] py-2 border disabled:bg-[#D9D9D9]  placeholder:text-[#74777E] text-[25px] rounded-sm px-5 border-[#74777E]">
+                                        <img src="../img/plass.png" class="ml-6" alt="">
                                 </div>
                                 <!-- 7th -->
+                                <div class="pt-14 pb-11 border-b-8 border-[#D7D7D7]">
+                                    <div class="relative w-[28%]">
+                                        <select name="" id=""
+                                            class="appearance-none border rounded-sm placeholder:text-[#181818] text-[25px] py-2 px-3 border-[#74777E]">
+                                            <option value="1">Asia - Dubai</option>
+                                            <option value="1">Europe - London</option>
+                                            <option value="1">America - New York</option>
+                                        </select>
+                                        <i
+                                            class="fa-solid fa-angle-down absolute top-1/2 right-4 text-[#74777E] text-2xl transform -translate-y-1/2 pointer-events-none"></i>
+                                        <label class="text-[#74777E] text-sm absolute -top-2 left-4 px-1 bg-white">Time
+                                            Zone</label>
+                                    </div>
+                                </div>
+                                <!-- 8th -->
+                                <div class="mt-9 border-b-4 border-[#D7D7D7]">
+                                    <h3 class="text-[26px] text-[#353535] font-semibold">Restricted dates</h3>
+                                    <div class="flex items-center justify-between">
+                                        <div class="py-4 flex items-center gap-10">
+                                            <!-- date -->
+                                            <div class="relative" id="dateContainer">
+                                                <input 
+                                                  type="text" 
+                                                  id="datePicker"
+                                                  class="border w-[85%] rounded-sm text-base text-[#a7a7a7] text-[25px] py-2 pb-5 px-10 border-[#74777E]">
+                                                <img 
+                                                id="calendarIcon"
+                                                  src="../img/Add payment voucher.png" 
+                                                  class="absolute top-4 left-2 pointer-events-none" 
+                                                  alt="Calendar Icon">
+                                                  <!-- LABLE -->
+                                                    <label class="text-[#74777E] text-sm absolute -top-2 left-4 px-1 bg-white">date</label>
+                                              </div>
+                                            <!-- check bar -->
+                                            <div class="flex items-center gap-2">
+                                                <label class="form-checkbox-wrapper relative">
+                                                    <input type="checkbox" class="form-checkbox hidden">
+                                                    <span
+                                                        class="custom-checkbox h-7 w-7 border border-primary-accent rounded flex items-center justify-center">
+                                                        <i class="fa-solid fa-check hidden text-white"></i>
+                                                    </span>
+                                                </label>
+                                                <h3 class="text-[22px] text-[#353535]">Repeat every year</h3>
+                                            </div>
+                                        </div>
+                                        <img src="../img/cross.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- add date -->
+                                 <div class="flex gap-1">
+                                    <img src="../img/plass.png" class="object-contain" alt="">
+                                    <h4 class="text-primary-secondary text-[22px] font-semibold">Add date</h4>
+                                 </div>
                             </div>
 
                         </div>
@@ -685,6 +742,8 @@
             </div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- script -->
     <script src="../script.js"></script>

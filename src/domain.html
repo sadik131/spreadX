@@ -19,65 +19,79 @@
         <!-- side bar -->
         <div id="sidebar" class="w-[30%] bg-primary-default h-screen relative transition-all duration-500">
             <div class="fixed top-0  flex items-center justify-between p-5">
-                <!-- Logo -->
-                <div id="lgLogo" class="w-[164px] h-[58px] ">
-                    <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
-                </div>
+              <!-- Logo -->
+              <div id="lgLogo" class="w-[164px] h-[58px] ">
+                <img src="../img/logo.png" alt="logo" class="w-full h-full object-cover">
+              </div>
             </div>
             <div class="flex items-center justify-between p-5">
-                <!-- Logo -->
-                <div id="smLogo" class="hidden w-[164px] h-[58px]">
-                    <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
-                </div>
+              <!-- Logo -->
+              <div id="smLogo" class="hidden w-[164px] h-[58px]">
+                <img src="../img/Logo X.png" alt="logo" class="w-full h-full object-cover">
+              </div>
             </div>
-        
+      
+            <!-- links -->
             <ul id="menu-items" class="mt-12 overflow-y-scroll text-white">
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/home3.png" alt="Dashboard" class="">
-                    <span class="text-[19px]">Dashboard</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (4).png" alt="Products" class="">
-                    <span class="text-[19px]">Products</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (5).png" alt="Inventory" class="">
-                    <span class="text-[19px]">Inventory</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (6).png" alt="Sales" class="">
-                    <span class="text-[19px]">Sales</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (7).png" alt="Customers" class="">
-                    <span class="text-[19px]">Customers</span>
-                </li>
-                <li class="flex items-center gap-7 pl-[30px] py-6">
-                    <img src="../img/Vector (8).png" alt="Settings" class="">
-                    <span class="text-[19px]">Settings</span>
-                </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/home3.png" alt="Dashboard" class="">
+                <span class="text-[19px]">Dashboard</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (4).png" alt="Products" class="">
+                <span class="text-[19px]">Products</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (5).png" alt="Inventory" class="">
+                <span class="text-[19px]">Inventory</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (6).png" alt="Sales" class="">
+                <span class="text-[19px]">Sales</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (7).png" alt="Customers" class="">
+                <span class="text-[19px]">Customers</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (8).png" alt="Settings" class="">
+                <span class="text-[19px]">Messages</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (9).png" alt="Settings" class="">
+                <span class="text-[19px]">Reports</span>
+              </li>
+              <li class="flex items-center gap-7 pl-[30px] py-6">
+                <img src="../img/Vector (10).png" alt="Settings" class="">
+                <span class="text-[19px]">Settings</span>
+              </li>
             </ul>
-        
+      
+            <!-- bottom  -->
             <div class="fixed bottom-0 w-full bg py-4">
-                <div class="px-5 flex items-center py-5">
-                    <label for="check" id="toggle-btn"
-                           class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
-                        <input type="checkbox" id="check" checked class="sr-only peer">
-                        <span
-                                class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500"></span>
-                    </label>
-                    </div>
-                <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
-                    <div class="flex px-5 py-5 items-center gap-3">
-                        <div
-                                class="bg-white text-primary-secondary w-[40px] h-[40px] rounded-md flex items-center justify-center font-bold">
-                            O
-                        </div>
-                        <span id="status-text" class="text text-white text-lg">Online</span>
-                    </div>
+              <div class="px-5 flex items-center gap-3 py-5">
+                <label for="check" id="toggle-btn"
+                  class="bg-primary-secondary cursor-pointer relative w-[52px] h-7 rounded-full block">
+                  <input type="checkbox" id="check" checked class="sr-only peer">
+                  <span
+                    class="w-2/5 h-4/5 bg-white absolute rounded-full left-[2px] top-[3px] peer-checked:left-[29px] transition-all duration-500 flex items-center justify-center">
+                    <img src="../img/arrow.png" alt="" id="arrow" class="w-[12px] h-[12px]">
+                  </span>
+                </label>
+      
+                <h1 id="collapes" class="text-[#939BB9] text-[19px]">COLLAPSE MENU</h1>
+              </div>
+              <div class="flex items-center justify-between border-t border-[#FFFFFF80]">
+                <div class="flex px-5 py-5 items-center gap-3">
+                  <div
+                    class="bg-white text-[28px] text-primary-secondary w-[40px] h-[40px] rounded-md flex justify-center font-bold">
+                    O
+                  </div>
+                  <span id="status-text" class="text text-white text-lg">Online</span>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
         <!-- main conteint -->
         <div class="relative h-full w-full overflow-y-scroll">
             <!-- center content -->
@@ -93,40 +107,44 @@
                     <div
                         class="flex justify-center px-[55px] py-0 xl:py-10 flex-col w-full h-full rounded-[16px] border-[#CCCCCC] border">
                         <div class="bg-[#EBF0FF] rounded-[14px] px-[50px] pt-[54px] pb-11 w-full">
-                            <div class="flex justify-between">
+                            <!-- <div class="flex justify-between"> -->
                                 <div class="flex gap-10 items-center">
                                     <!-- img -->
                                     <img src="../img/global.png" alt="domain" class=" object-cover">
                                     <!-- domin -->
-                                    <div>
-                                        <h1 class="text-[#393939] text-[23px] font-semibold">
-                                            https://sample-domain-123.spreadx.ae</h1>
-                                        <p class="text-[23px] text-[#999999]">SpreadX Domain</p>
-                                        <div class="flex mt-[30px] xl:text-base text-[23px] items-center justify-between">
-                                            <div class="flex gap-5">
-                                                <button
-                                                    class="py-2 px-5 bg-primary-default rounded-md text-white">Manage
-                                                    Domain</button>
-                                                <button class="py-2 px-5 bg-primary-default rounded-md text-white">Edit
-                                                    Site</button>
-                                                <button class="py-2 px-5 bg-primary-default rounded-md text-white">View
-                                                    Live
-                                                    Site</button>
-                                            </div>
-                                            <a href="" class="text-primary-secondary font-semibold">PUBLISH</a>
+                                    <div class="flex items-center w-full justify-between">
+                                        <div>
+                                            <h1 class="text-[#393939] text-[23px] font-semibold">
+                                                https://sample-domain-123.spreadx.ae</h1>
+                                            <p class="text-[23px] text-[#999999]">SpreadX Domain</p>
                                         </div>
+                                        <label for="toggle1"
+                                            class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
+                                            <input type="checkbox" id="toggle1" class="peer hidden">
+                                            <span
+                                                class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
+                                            <!-- Toggle switch -->
+                                            <span
+                                                class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
+                                        </label>
                                     </div>
                                 </div>
-                                <label for="toggle1"
-                                    class="relative cursor-pointer w-12 h-5 bg-[#747474] rounded-full flex items-center">
-                                    <input type="checkbox" id="toggle1" class="peer hidden">
-                                    <span
-                                        class="w-full h-full absolute inset-0 bg-[#747474] peer-checked:bg-[#AED2FF] rounded-full"></span>
-                                    <!-- Toggle switch -->
-                                    <span
-                                        class="w-[33px] h-[33px] bg-[#090909] peer-checked:bg-primary-default rounded-full absolute left-[-2px] transition-transform duration-300 peer-checked:translate-x-5"></span>
-                                </label>
-                            </div>
+                                <div
+                                    class="flex mt-[30px] xl:text-base text-[23px] items-center justify-between">
+                                    <div class="flex gap-5">
+                                        <button
+                                            class="py-2 px-5 bg-primary-default rounded-md text-white">Manage
+                                            Domain</button>
+                                        <button class="py-2 px-5 bg-primary-default rounded-md text-white">Edit
+                                            Site</button>
+                                        <button class="py-2 px-5 bg-primary-default rounded-md text-white">View
+                                            Live
+                                            Site</button>
+                                    </div>
+                                    <a href="" class="text-primary-secondary font-semibold">PUBLISH</a>
+                                </div>
+
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
