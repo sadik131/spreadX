@@ -103,3 +103,12 @@
   background-color: #888; /* Dark gray color for the thumb */
   border-radius: 5px; /* Match the track's border radius */
 }
+
+.group-card-hover {
+  display: none; /* Initially hide the submenu */
+}
+
+/* Show the dropdown menu when hovering over the group-card */
+.group-card:hover .group-card-hover {
+  display: block; /* Show on hover */
+}
