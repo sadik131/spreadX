@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const firstHoverBlock = document.getElementById("first-hover-block");
+  const nestedHoverBlock = document.getElementById("nested-hover-block");
+  const onlineSection = document.getElementById("online-section");
+
+  // Show first hover block on hover
+  onlineSection.addEventListener("mouseenter", () => {
+    firstHoverBlock.classList.remove("hidden");
+  });
+
+  onlineSection.addEventListener("mouseleave", () => {
+    firstHoverBlock.classList.add("hidden");
+  });
+
+  // Show nested hover block on hover
+  firstHoverBlock.addEventListener("mouseenter", () => {
+    nestedHoverBlock.classList.remove("hidden");
+  });
+
+  firstHoverBlock.addEventListener("mouseleave", () => {
+    nestedHoverBlock.classList.add("hidden");
+  });
+});
+
 
 // date picker
 document.addEventListener("DOMContentLoaded", function () {
